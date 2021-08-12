@@ -15,10 +15,10 @@ const Character = ({ name, species, status, image }) => {
 };
 
 Character.propTypes = {
-  name: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  name: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
+  image: PropTypes.string
 };
 
 export default Character;
