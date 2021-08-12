@@ -4,6 +4,7 @@ import { BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+import useCharacters from './state/Hook';
 
 export default function App() {
   return (
@@ -18,34 +19,21 @@ export default function App() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/characters">Characters</Link>
             </li>
           </ul>
         </nav>
-        <Switch>
+        {/* <Switch>
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/characters">
+            <Characters />
           </Route>
           <Route path="/">
-            <Home />
           </Route>
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
