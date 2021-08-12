@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchCharacters, fetchCharacter } from '../../../services/Api';
+import { fetchCharacters, fetchCharacter } from '../services/Api';
 
 
 
