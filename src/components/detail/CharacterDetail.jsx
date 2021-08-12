@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCharacter } from '../../state/Hook';
 
-const CharacterDetails = () => {
+const CharacterDetail = () => {
   const [character, loading] = useCharacter();
 
   if(loading) return <h1>Loading...</h1>;
@@ -18,4 +18,4 @@ const CharacterDetails = () => {
   );
 };
 
-export default CharacterDetails;
+export default CharacterDetail;
