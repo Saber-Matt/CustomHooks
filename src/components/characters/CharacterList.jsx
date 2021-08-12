@@ -1,6 +1,6 @@
 import React from 'react';
 import Character from './Character';
-import { useCharacters } from '../../state/characters';
+import { useCharacters } from '../../state/Hook';
 import { Link } from 'react-router-dom';
 const CharacterList = () => {
   const [characters, loading] = useCharacters();
