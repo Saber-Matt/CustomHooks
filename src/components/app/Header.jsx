@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export function Header () => {
+const Header = () => {
   return (
-    <header className={styles.Header}>
+    <header>
       <h1>Rick And Morty</h1>
       <NavLink  to="/">List</NavLink>
     </header>
   );
 };
+
+export default Header;

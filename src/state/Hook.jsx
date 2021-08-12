@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { fetchCharacters, fetchCharacter } from '../services/Api';
-
-
-
-
-
-const useCharacters = () => {
+//
+const useCharacters = (page) => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetchCharacters()
-      .then(setCharacters  => setCharacters(characters))
+    // setLoading(true);
+    fetchCharacters(page)
+      .then(characters => setCharacters(characters))
       .finally(() => setLoading(false));
   }, [page]);
 
-  return { characters, loading };
+  return [characters, loading];
 };
 
 const useCharacter = () => {
